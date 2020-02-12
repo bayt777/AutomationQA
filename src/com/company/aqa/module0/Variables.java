@@ -1,4 +1,4 @@
-package com.company.aqa.module1;
+package com.company.aqa.module0;
 
 public class Variables {
     public static void main(String[] args) {

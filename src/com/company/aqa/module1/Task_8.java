@@ -1,4 +1,4 @@
-package com.company.aqa.module2;
+package com.company.aqa.module1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

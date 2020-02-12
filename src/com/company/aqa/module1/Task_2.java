@@ -1,4 +1,4 @@
-package com.company.aqa.module2;
+package com.company.aqa.module1;
 
 //Задача 2
 // Обменять значения двух переменных, используя третью (буферную) переменную.
