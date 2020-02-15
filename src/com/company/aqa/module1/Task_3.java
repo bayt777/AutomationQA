@@ -39,7 +39,7 @@ public class Task_3 {
             System.out.println("If you finished, enter \"0\" for exit");
 
         } while (a != 0);
-        System.out.println("Program closed");
+        System.out.println("Program is closed");
 
     }
 }
