@@ -38,12 +38,10 @@ public class Library {
      */
     public ArrayList<Book> findBookByAuthor(String author) {
         ArrayList<Book> found = new ArrayList<>();
-        int i = 0;
         for (Book search : this.myListOfBook) {
-            if (myListOfBook.get(i).getAuthor().contains(author)) {
+            if (search.getAuthor().contains(author)) {
                 found.add(search);
             }
-            i++;
         }
         return found;
     }
@@ -56,12 +54,10 @@ public class Library {
      */
     public ArrayList<Book> findBookByPublishingHouse(String publishingHouse) {
         ArrayList<Book> found = new ArrayList<>();
-        int i = 0;
         for (Book search : this.myListOfBook) {
-            if (myListOfBook.get(i).getPublishingHouse().contains(publishingHouse)) {
+            if (search.getPublishingHouse().contains(publishingHouse)) {
                 found.add(search);
             }
-            i++;
         }
         return found;
     }
@@ -74,12 +70,10 @@ public class Library {
      */
     public ArrayList<Book> findBookByYearOfPublishing(int year) {
         ArrayList<Book> found = new ArrayList<>();
-        int i = 0;
         for (Book search : this.myListOfBook) {
-            if (myListOfBook.get(i).getYearOfPublishing() > year) {
+            if (search.getYearOfPublishing() > year) {
                 found.add(search);
             }
-            i++;
         }
         return found;
     }
