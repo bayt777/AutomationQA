@@ -25,7 +25,7 @@ public class Task_3_1 {
                 s = "пробел";
             System.out.println(s + " = " + number);
             number = 0;
-//            arrInc(mas, c);
+            arrInc(mas, c);
         }
     }
 
