@@ -2,10 +2,10 @@ package com.company.aqa.module4.eshop.marketstaff;
 
 import com.company.aqa.module4.eshop.Person;
 
-public abstract class MarketStaff extends Person {
+public class MarketStaff extends Person {
 
 
-    String shopName = "Rozetka";
+    private String shopName = "Rozetka";
 
 
     public String getShopName() {
@@ -14,5 +14,25 @@ public abstract class MarketStaff extends Person {
 
     public void setShopName(String shopName) {
         this.shopName = shopName;
+    }
+
+    @Override
+    public void talk() {
+
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("I go to product");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("I run out side");
+    }
+
+    @Override
+    public void steal() {
+
     }
 }

@@ -8,4 +8,5 @@ public class Administrator extends MarketStaff {
 
     public Administrator(String name, int age, String gender) {
     }
+
 }
