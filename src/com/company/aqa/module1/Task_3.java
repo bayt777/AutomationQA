@@ -3,6 +3,7 @@ package com.company.aqa.module1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 /*
 Задача 3
         Из двух чисел с разной четностью, вывести на экран нечетное число.
@@ -37,7 +38,9 @@ public class Task_3 {
             }
             System.out.println("You entered " + ++count + " numbers: " + even + " even numbers, " + notEven + " not even numbers");
             System.out.println("If you finished, enter \"0\" for exit");
-
+            if (count < 2) {
+                System.out.println("Need enter 2 numbers");
+            }
         } while (a != 0);
         System.out.println("Program is closed");
 
