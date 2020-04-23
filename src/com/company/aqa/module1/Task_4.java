@@ -25,8 +25,7 @@ public class Task_4 {
                 ans = reader.readLine();
                 System.out.println("It is - " + x + " \ny/n?");
                 x++;
-            } else
-            if (x != 0){
+            } else {
                 ans = reader.readLine();
                 System.out.println("It is - " + x + " \ny/n?");
                 x--;
