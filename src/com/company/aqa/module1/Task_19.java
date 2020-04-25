@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task_19 {
-/*
- * Задача 19
- * Написать программу, в которой вводятся два числа Х и Y и знак операции (+, –, /, *).
- * Вычислить результат Z в зависимости от знака. Предусмотреть реакции на возможный неверный знак операции, а также на ввод Y=0 при делении.
- */
+    /*
+     * Задача 19
+     * Написать программу, в которой вводятся два числа Х и Y и знак операции (+, –, /, *).
+     * Вычислить результат Z в зависимости от знака. Предусмотреть реакции на возможный неверный знак операции, а также на ввод Y=0 при делении.
+     */
 
     public static void main(String[] args) throws IOException {
 
@@ -20,19 +20,23 @@ public class Task_19 {
 
         System.out.println("Operation sign...");
         String sign = reader.readLine();
-        switch (sign) {
-            case "+":
-                System.out.println(a+b);
-                break;
-            case "-":
-                System.out.println(a-b);
-                break;
-            case "/":
-                System.out.println(a/b);
-                break;
-            case "*":
-                System.out.println(a*b);
-                break;
+        if (sign.contains("+") || sign.contains("-") || sign.contains("/") || sign.contains("*")) {
+            switch (sign) {
+                case "+":
+                    System.out.println(a + b);
+                    break;
+                case "-":
+                    System.out.println(a - b);
+                    break;
+                case "/":
+                    System.out.println(a / b);
+                    break;
+                case "*":
+                    System.out.println(a * b);
+                    break;
+            }
+        } else {
+            System.out.println("Wrong sign!!! Try again!");
         }
     }
 }
