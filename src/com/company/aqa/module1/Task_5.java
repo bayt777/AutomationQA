@@ -16,11 +16,14 @@ public class Task_5 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         int year = Integer.parseInt(reader.readLine());
-
-        if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0){
-            System.out.println("количество дней в году: "+leapYear);
-        }else{
-            System.out.println("количество дней в году: "+normalYear);
+        if (year != 0) {
+            if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+                System.out.println("количество дней в году: " + leapYear);
+            } else {
+                System.out.println("количество дней в году: " + normalYear);
+            }
+        } else {
+            System.out.println("Введите другой год, не \"0\"");
         }
     }
 }
