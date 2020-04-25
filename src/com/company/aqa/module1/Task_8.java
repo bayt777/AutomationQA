@@ -18,42 +18,44 @@ public class Task_8 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите возраст...");
         int s = Integer.parseInt(reader.readLine());
-
-        if (s > 100) {
-            System.out.println("Та ну нах..!");
-        } else
-            switch (s / 10 + 1) {
-                case 1:
-                    System.out.println("Мелкий!");
-                    break;
-                case 2:
-                    System.out.println("Можешь работать!");
-                    break;
-                case 3:
-                    System.out.println("Можешь зарабатывать!");
-                    break;
-                case 4:
-                    System.out.println("Заведи уже наконец то детей!");
-                    break;
-                case 5:
-                    System.out.println("Подумай о пенсии!");
-                    break;
-                case 6:
-                    System.out.println("Пора бы отдохнуть!");
-                    break;
-                case 7:
-                    System.out.println("Вторая молодость?");
-                    break;
-                case 8:
-                    System.out.println("Зубы уже выпали?");
-                    break;
-                case 9:
-                    System.out.println("Еще живой?");
-                    break;
-                case 10:
-                    System.out.println("Пора бы и к земле уже?");
-                    break;
-            }
-
+        if (s < 0) {
+            System.out.println("Need to enter only positive number");
+        } else {
+            if (s > 100) {
+                System.out.println("Та ну нах..!");
+            } else
+                switch (s / 10 + 1) {
+                    case 1:
+                        System.out.println("Мелкий!");
+                        break;
+                    case 2:
+                        System.out.println("Можешь работать!");
+                        break;
+                    case 3:
+                        System.out.println("Можешь зарабатывать!");
+                        break;
+                    case 4:
+                        System.out.println("Заведи уже наконец то детей!");
+                        break;
+                    case 5:
+                        System.out.println("Подумай о пенсии!");
+                        break;
+                    case 6:
+                        System.out.println("Пора бы отдохнуть!");
+                        break;
+                    case 7:
+                        System.out.println("Вторая молодость?");
+                        break;
+                    case 8:
+                        System.out.println("Зубы уже выпали?");
+                        break;
+                    case 9:
+                        System.out.println("Еще живой?");
+                        break;
+                    case 10:
+                        System.out.println("Пора бы и к земле уже?");
+                        break;
+                }
+        }
     }
 }
