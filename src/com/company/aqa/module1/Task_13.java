@@ -14,6 +14,7 @@ public class Task_13 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int x = Integer.parseInt(reader.readLine());
 
+        int sum = 0;
         int currentNumber;
         int dividers;
         for (currentNumber = 1; currentNumber < x; currentNumber++) {
@@ -22,8 +23,11 @@ public class Task_13 {
                 if (currentNumber % i == 0)
                     dividers++;
             }
-            if (dividers <= 2)
+            if (dividers <= 2) {
                 System.out.println(currentNumber);
+                sum += currentNumber;
+            }
         }
+        System.out.println("Sum equals = " + sum);
     }
 }
