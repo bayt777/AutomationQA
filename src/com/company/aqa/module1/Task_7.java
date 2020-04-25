@@ -15,13 +15,17 @@ public class Task_7 {
         int y = Integer.parseInt(reader.readLine());
         int z = Integer.parseInt(reader.readLine());
 
-        if (x + y > z) {
-            System.out.println("There is triangle");
-        } else if (x + z > y) {
-            System.out.println("There is triangle");
-        } else if (y + z > x) {
-            System.out.println("There is triangle");
-        } else
-            System.out.println("There isn't triangle");
+        if (z != 0 && y != 0 && x != 0) {
+            if (x + y > z) {
+                System.out.println("There is triangle");
+            } else if (x + z > y) {
+                System.out.println("There is triangle");
+            } else if (y + z > x) {
+                System.out.println("There is triangle");
+            } else
+                System.out.println("There isn't triangle");
+        } else {
+            System.out.println("Need to enter not 0 side length");
+        }
     }
 }
