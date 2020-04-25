@@ -14,11 +14,11 @@ public class Task_15 {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int limit = Integer.parseInt(reader.readLine());
-
+        System.out.print("N = " + limit + " | ");
         for (int i = 1; i < limit; i++) {
             int a = i * i;
             if (a < limit)
-                System.out.println(a);
+                System.out.print(a + ", ");
 
         }
     }
