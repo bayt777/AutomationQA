@@ -4,7 +4,6 @@ import com.company.aqa.module4.eshop.Person;
 
 public class MarketStaff extends Person {
 
-
     private String shopName = "Rozetka";
 
 
@@ -18,7 +17,7 @@ public class MarketStaff extends Person {
 
     @Override
     public void talk() {
-
+        System.out.println("I can talk");
     }
 
     @Override
@@ -34,5 +33,9 @@ public class MarketStaff extends Person {
     @Override
     public void steal() {
 
+    }
+
+    public void sayGoodBay() {
+        System.out.println("All market staff say GoodBay!!!");
     }
 }

@@ -1,17 +1,81 @@
 package com.company.aqa.module4.eshop.products;
 
-public class Product<T, P> implements IProduct<T>{
+import java.util.ArrayList;
 
-    private T id;
+public class Product implements IProduct {
+
+    private int id;
+    private String name;
+    private String category;
+    private String description;
     private double price;
+    private ArrayList<Product> priceList = new ArrayList<>();
 
-    public Product(T id, double price) {
+    public Product(int id, String name, String category, String description, double price) {
         this.id = id;
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.price = price;
+    }
+
+    public Product() {
+
+    }
+
+    public void setPriceList(Product product) {
+        this.priceList.add(product);
+    }
+
+    public ArrayList<Product> getPriceList() {
+        return priceList;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
     }
 
     @Override
-    public T getId() {
-        return null;
+    public String toString() {
+        return "name = '" + name + '\'' +
+                ", category = '" + category + '\'' +
+                ", description = '" + description + '\'' +
+                ", price = '" + price + "\n";
     }
 }

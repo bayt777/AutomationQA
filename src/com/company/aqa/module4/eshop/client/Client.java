@@ -12,7 +12,7 @@ public class Client extends Person {
 
     @Override
     public void talk() {
-
+        System.out.println("Hello my name is " + getName());
     }
 
     @Override
@@ -30,4 +30,7 @@ public class Client extends Person {
 
     }
 
+    public String goToMarket(){
+        return "I'm in the market!";
+    }
 }
