@@ -1,7 +1,9 @@
 package com.company.aqa.module4.eshop.marketstaff;
 
-import com.company.aqa.module4.eshop.Human;
+import com.company.aqa.module4.eshop.base.Human;
 import com.company.aqa.module4.eshop.client.Client;
+import com.company.aqa.module4.eshop.marketstaff.constatns.Positions;
+import com.company.aqa.module4.eshop.products.departments.ProductDepartment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,54 +11,26 @@ import java.io.InputStreamReader;
 
 public class SalesConsultant extends MarketStaff implements Human {
 
-    private String name;
-    private int age;
-    private String gender;
-
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    public SalesConsultant(String name, int age, String gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+    private ProductDepartment depart;
+
+    public SalesConsultant(String name, int age, String gender, ProductDepartment department) {
+        super(name, age, gender);
+        this.depart = department;
+
     }
 
-    @Override
-    public String getName() {
-        return name;
+    public ProductDepartment getDepart() {
+        return depart;
     }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public int getAge() {
-        return age;
-    }
-
-    @Override
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    @Override
-    public String getGender() {
-        return gender;
-    }
-
-    @Override
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void printHello() {
-        System.out.println("Welcome to e-shop *** " + getShopName().toUpperCase() + " ***");
-        System.out.println("Hi!\nMy name is " + name + " I'm sales consultant");
+    public void setDepart(ProductDepartment depart) {
+        this.depart = depart;
     }
 
     public Client whaIsYourName() throws IOException {
+
         System.out.println("What is your name?");
         String words = null;
         try {
@@ -64,6 +38,7 @@ public class SalesConsultant extends MarketStaff implements Human {
         } catch (IOException e) {
             System.out.println("Name must be word");
         }
+        sayWelcomeMsgAndIntroduce(words, SalesConsultant.this.getName(), Positions.SALES_CONSULTANT);
         System.out.println("How old are you?");
         int age = 0;
         try {
@@ -81,8 +56,8 @@ public class SalesConsultant extends MarketStaff implements Human {
         return new Client(words, age, cash);
     }
 
-    public String askWahtYouWant(String name, String priceList) throws IOException {
-        System.out.println("What you want " + name + "?");
+    public String askWahtYouWant(String clientName, String priceList) throws IOException {
+        System.out.println("What you want " + clientName + "?");
         System.out.println("You can make choice from our price list:");
         System.out.println(priceList);
         return reader.readLine();

@@ -1,20 +1,22 @@
 package com.company.aqa.module4.eshop.products;
 
+import com.company.aqa.module4.eshop.products.departments.ProductDepartment;
+
 import java.util.ArrayList;
 
 public class Product implements IProduct {
 
     private int id;
     private String name;
-    private String category;
+    private String department;
     private String description;
     private double price;
     private ArrayList<Product> priceList = new ArrayList<>();
 
-    public Product(int id, String name, String category, String description, double price) {
+    public Product(int id, String name, ProductDepartment productDepartment, String description, double price) {
         this.id = id;
         this.name = name;
-        this.category = category;
+        this.department = productDepartment.getDepartmentName();
         this.description = description;
         this.price = price;
     }
@@ -47,12 +49,12 @@ public class Product implements IProduct {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     public String getDescription() {
@@ -74,7 +76,7 @@ public class Product implements IProduct {
     @Override
     public String toString() {
         return "name = '" + name + '\'' +
-                ", category = '" + category + '\'' +
+                ", category = '" + department + '\'' +
                 ", description = '" + description + '\'' +
                 ", price = '" + price + "\n";
     }

@@ -1,6 +1,6 @@
-package com.company.aqa.module4.eshop;
+package com.company.aqa.module4.eshop.base;
 
-public abstract class Person implements Human{
+public abstract class Person implements Human {
 
     private String name;
     private int age;
@@ -11,6 +11,15 @@ public abstract class Person implements Human{
     private int inn;
     private double cashBalance;
 
+    public Person(String name, int age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    public Person() {
+
+    }
 
     public String getName() {
         return name;

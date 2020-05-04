@@ -1,51 +1,16 @@
 package com.company.aqa.module4.eshop.marketstaff;
 
 import com.company.aqa.module4.eshop.client.Client;
+import com.company.aqa.module4.eshop.marketstaff.constatns.Positions;
 
 public class Security extends MarketStaff {
 
-    private String name;
-    private int age;
-    private String gender;
-
     public Security(String name, int age, String gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        super(name, age, gender);
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public int getAge() {
-        return age;
-    }
-
-    @Override
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    @Override
-    public String getGender() {
-        return gender;
-    }
-
-    @Override
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void cathClient(Client firstClient) {
-        System.out.print("Охрана");
-        System.out.println(firstClient.getName() + "Стоять, стрелять буду!");
+    public void catchClient(Client client) {
+        sayWelcomeMsgAndIntroduce(client.getName(), Security.this.getName(), Positions.SECURITY);
+        System.out.println(client.getName() + " Stop, I will shoot!");
     }
 }

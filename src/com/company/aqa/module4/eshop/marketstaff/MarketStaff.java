@@ -1,11 +1,14 @@
 package com.company.aqa.module4.eshop.marketstaff;
 
-import com.company.aqa.module4.eshop.Person;
+import com.company.aqa.module4.eshop.base.Person;
 
-public class MarketStaff extends Person {
+public abstract class MarketStaff extends Person {
 
     private String shopName = "Rozetka";
 
+    public MarketStaff(String name, int age, String gender) {
+        super(name, age, gender);
+    }
 
     public String getShopName() {
         return shopName;
@@ -33,6 +36,12 @@ public class MarketStaff extends Person {
     @Override
     public void steal() {
 
+    }
+
+    public void sayWelcomeMsgAndIntroduce(String clientName, String staffName, String position) {
+        System.out.println("Hello " + clientName + "!!!");
+        System.out.println("My name is " + staffName + ", I am "+ position);
+        System.out.println("Welcome to e-shop *** " + getShopName().toUpperCase() + " ***");
     }
 
     public void sayGoodBay() {

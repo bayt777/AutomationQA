@@ -1,6 +1,6 @@
 package com.company.aqa.module4.eshop.client;
 
-import com.company.aqa.module4.eshop.Person;
+import com.company.aqa.module4.eshop.base.Person;
 
 public class Client extends Person {
 
@@ -28,9 +28,5 @@ public class Client extends Person {
     @Override
     public void steal() {
 
-    }
-
-    public String goToMarket(){
-        return "I'm in the market!";
     }
 }

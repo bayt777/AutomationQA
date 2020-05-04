@@ -1,4 +1,4 @@
-package com.company.aqa.module4.eshop;
+package com.company.aqa.module4.eshop.base;
 
 public interface Human {
 
