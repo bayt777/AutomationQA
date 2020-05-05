@@ -24,6 +24,7 @@ public class Library {
      */
     public void getListOfMyBook() {
         int i = 1;
+
         for (Book book : myListOfBook) {
             System.out.println(i + ". " + book.getName() + "   Price: " + book.getPrice() + " $");
             i++;
@@ -38,11 +39,13 @@ public class Library {
      */
     public ArrayList<Book> findBookByAuthor(String author) {
         ArrayList<Book> found = new ArrayList<>();
+
         for (Book search : this.myListOfBook) {
             if (search.getAuthor().contains(author)) {
                 found.add(search);
             }
         }
+
         return found;
     }
 
@@ -54,7 +57,9 @@ public class Library {
      */
     public ArrayList<Book> findBookByPublishingHouse(String publishingHouse) {
         ArrayList<Book> found = new ArrayList<>();
+
         for (Book search : this.myListOfBook) {
+
             if (search.getPublishingHouse().contains(publishingHouse)) {
                 found.add(search);
             }
@@ -70,7 +75,9 @@ public class Library {
      */
     public ArrayList<Book> findBookByYearOfPublishing(int year) {
         ArrayList<Book> found = new ArrayList<>();
+
         for (Book search : this.myListOfBook) {
+
             if (search.getYearOfPublishing() > year) {
                 found.add(search);
             }
