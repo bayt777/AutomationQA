@@ -1,2 +1,0 @@
-# AutomationQA
-Test create
