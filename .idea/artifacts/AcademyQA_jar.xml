@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="AcademyQA:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AcademyQA_jar</output-path>
-    <root id="archive" name="AcademyQA.jar">
-      <element id="module-output" name="AcademyQA" />
-    </root>
-  </artifact>
-</component>
