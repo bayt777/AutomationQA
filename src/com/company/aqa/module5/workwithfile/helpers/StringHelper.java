@@ -9,14 +9,8 @@ public class StringHelper {
 
     public Map<Character, Long> countAllLetters(String str) {
 
-        Map<Character, Long> frequency =
-                str.toLowerCase().chars()
-                        .mapToObj(c -> (char) c)
-                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        for (Map.Entry entry : frequency.entrySet()) {
-            String text = "Character : \"" + entry.getKey() + "\" occurs " + entry.getValue() + " times";
-            System.out.println(makeColor(text, "blue"));
-        }
+        Map<Character, Long> frequency = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        frequency.forEach((character, aLong) -> System.out.println(makeColor("Character : \"" + character + "\" occurs " + aLong + " times", "blue")));
         return frequency;
     }
 
@@ -55,12 +49,8 @@ public class StringHelper {
 
     public String printMap(Map<Character, Long> map) {
         StringBuilder stringBuilder = new StringBuilder();
-        String newText = "";
-        for (Map.Entry entry : map.entrySet()) {
-            String text = "Character : \"" + entry.getKey() + "\" occurs " + entry.getValue() + " times";
-            newText = stringBuilder.append(text).append("\n").toString();
-        }
-        return newText;
+        map.forEach((character, aLong) -> stringBuilder.append("Character : \"").append(character).append("\" occurs ").append(aLong).append(" times").append("\n"));
+        return stringBuilder.toString();
     }
 
 }
