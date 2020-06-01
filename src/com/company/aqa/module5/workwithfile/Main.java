@@ -55,7 +55,6 @@ public class Main {
 
             System.out.println("Enter some text:");
             String text = reader.readLine();
-            reader.close();
 
             if (sourceOut.contains("f")) {
                 System.out.println("Enter output file path:");
@@ -71,6 +70,7 @@ public class Main {
                 sh.countAllLetters(text);
                 System.out.println(sh.findLetter(character, text));
             }
+            reader.close();
         }
     }
 }
