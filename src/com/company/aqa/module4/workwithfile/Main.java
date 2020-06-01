@@ -1,7 +1,8 @@
-package com.company.aqa.module5.workwithfile;
+package com.company.aqa.module4.workwithfile;
 
-import com.company.aqa.module5.workwithfile.helpers.FileHelper;
-import com.company.aqa.module5.workwithfile.helpers.StringHelper;
+import com.company.aqa.module4.workwithfile.helpers.FileHelper;
+import com.company.aqa.module4.workwithfile.helpers.Salutation;
+import com.company.aqa.module4.workwithfile.helpers.StringHelper;
 
 import java.io.BufferedReader;
 import java.io.IOException;

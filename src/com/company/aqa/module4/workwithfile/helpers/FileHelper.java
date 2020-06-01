@@ -1,4 +1,4 @@
-package com.company.aqa.module5.workwithfile.helpers;
+package com.company.aqa.module4.workwithfile.helpers;
 
 import java.io.FileReader;
 import java.io.FileWriter;

@@ -1,8 +1,8 @@
-package com.company.aqa.module5.workwithfile;
+package com.company.aqa.module4.workwithfile.helpers;
 
 public class Salutation {
 
-    void salut() {
+    public void salut() {
         String[] arr = {
 
 
